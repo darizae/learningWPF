@@ -1,0 +1,16 @@
+C:\Users\danie\git\learningWPF\WpfApp01\WpfApp01\bin\Debug\WpfApp01.exe.config
+C:\Users\danie\git\learningWPF\WpfApp01\WpfApp01\bin\Debug\WpfApp01.exe
+C:\Users\danie\git\learningWPF\WpfApp01\WpfApp01\bin\Debug\WpfApp01.pdb
+C:\Users\danie\git\learningWPF\WpfApp01\WpfApp01\obj\Debug\WpfApp01.csproj.AssemblyReference.cache
+C:\Users\danie\git\learningWPF\WpfApp01\WpfApp01\obj\Debug\WpfApp01.csproj.SuggestedBindingRedirects.cache
+C:\Users\danie\git\learningWPF\WpfApp01\WpfApp01\obj\Debug\MainWindow.g.cs
+C:\Users\danie\git\learningWPF\WpfApp01\WpfApp01\obj\Debug\App.g.cs
+C:\Users\danie\git\learningWPF\WpfApp01\WpfApp01\obj\Debug\WpfApp01_MarkupCompile.cache
+C:\Users\danie\git\learningWPF\WpfApp01\WpfApp01\obj\Debug\WpfApp01_MarkupCompile.lref
+C:\Users\danie\git\learningWPF\WpfApp01\WpfApp01\obj\Debug\MainWindow.baml
+C:\Users\danie\git\learningWPF\WpfApp01\WpfApp01\obj\Debug\WpfApp01.g.resources
+C:\Users\danie\git\learningWPF\WpfApp01\WpfApp01\obj\Debug\WpfApp01.Properties.Resources.resources
+C:\Users\danie\git\learningWPF\WpfApp01\WpfApp01\obj\Debug\WpfApp01.csproj.GenerateResource.cache
+C:\Users\danie\git\learningWPF\WpfApp01\WpfApp01\obj\Debug\WpfApp01.csproj.CoreCompileInputs.cache
+C:\Users\danie\git\learningWPF\WpfApp01\WpfApp01\obj\Debug\WpfApp01.exe
+C:\Users\danie\git\learningWPF\WpfApp01\WpfApp01\obj\Debug\WpfApp01.pdb
