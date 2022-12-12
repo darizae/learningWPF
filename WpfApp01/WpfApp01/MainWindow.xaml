@@ -5,9 +5,4 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp01"
         mc:Ignorable="d"
-        Title="My First WPF GUI" Height="450" Width="800">
-    <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="381,201,0,0" TextWrapping="Wrap" Text="Hello World" VerticalAlignment="Top"/>
-
-    </Grid>
-</Window>
+        Title="My First WPF GUI" Height="510" Width="530"/>
