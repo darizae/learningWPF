@@ -5,21 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="Calculator" Height="550" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="{x:Null}">
-    <Border Background="#E5000000" CornerRadius="10">
-        <Grid>
-            <StackPanel>
-                <Grid>
-                    <StackPanel>
-                        <Button HorizontalAlignment="Left" Height="20" Width="20">
-                            <Image Source="C:\Users\danie\Downloads\icon2.png"/>
-                        </Button>
-                    </StackPanel>
-                    <StackPanel>
+        Title="Taschenrechner" Height="500" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="White" HorizontalAlignment="Left" Width="400">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <GroupBox Header="Ausgabewerte">
+        </GroupBox>
+        <GroupBox Grid.Row="1" Header="Operationen">
+        </GroupBox>
+        <Grid/>
+        <Grid Grid.Row="0">
+            <ListBox x:Name="list_box" d:ItemsSource="{d:SampleData ItemCount=5}"/>
 
-                    </StackPanel>
-                </Grid>
-            </StackPanel>
         </Grid>
-    </Border>
+        <Grid Grid.Row="1">
+            <RadioButton GroupName="rechnenoperationen" x:Name="rb_tan" Content="tan" HorizontalAlignment="Left" Margin="20,39,0,0" VerticalAlignment="Top"/>
+            <RadioButton GroupName="rechnenoperationen" x:Name="rb_pot" Content="e" HorizontalAlignment="Left" Margin="71,39,0,0" VerticalAlignment="Top"/>
+            <RadioButton GroupName="rechnenoperationen" x:Name="rb_sin" Content="sin" HorizontalAlignment="Left" Margin="20,59,0,0" VerticalAlignment="Top"/>
+            <RadioButton GroupName="rechnenoperationen" x:Name="rb_root" Content="√" HorizontalAlignment="Left" Margin="71,59,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="eingabe_tf" HorizontalAlignment="Left" Margin="254,56,0,0" TextWrapping="Wrap" Text="0.0" VerticalAlignment="Top" Width="120"/>
+            <Button x:Name="btn_eq" Content="=" HorizontalAlignment="Left" Margin="254,83,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="54" FontSize="15" Click="btn_eq_Click"/>
+            <Button x:Name="btn_c" Content="C  " HorizontalAlignment="Left" Margin="314,83,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="60" FontSize="15" Click="btn_c_Click"/>
+            <Label x:Name="ausgabe_lb" Content="0.0" HorizontalAlignment="Left" Margin="295,25,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.011,-0.095"/>
+        </Grid>
+    </Grid>
 </Window>
