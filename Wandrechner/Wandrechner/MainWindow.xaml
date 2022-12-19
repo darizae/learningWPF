@@ -45,5 +45,6 @@
                 <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Margin="15,10,15,10" FontWeight="Bold">Berechne Wandparameter!</Button>
             </Grid>
         </GroupBox>
+        <Label Grid.Row="1" Grid.Column="0" Content="Ausgabe:" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30" FontWeight="bold" FontSize="18"></Label>
     </Grid>
 </Window>
