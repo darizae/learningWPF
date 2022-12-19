@@ -24,5 +24,28 @@ namespace Wandrechner
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            double breite = Double.Parse(tb_breite.Text);
+            double laenge = Double.Parse(tb_laenge.Text);
+            double hoehe = Double.Parse(tb_hoehe.Text);
+
+            bool istTragend = (bool)cb_istTragend.IsChecked;
+
+            string material = cbo_material.Text;
+
+            Wand wandPlan = new Wand();
+            wandPlan.breite = breite;
+            wandPlan.hoehe = hoehe;
+            wandPlan.laenge= laenge;
+            wandPlan.material= material;
+            wandPlan.istTragend= istTragend;
+
+            wandPlan.BerechneSchalungsflaeche();
+            wandPlan.BerechneBewehrungsmenge();
+
+            lbl_ausgabe.Content = $"Ausgabe {wandPlan.GebeWandinfosAus()}";
+        }
     }
 }

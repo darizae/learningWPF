@@ -20,13 +20,14 @@ namespace Wandrechner
             this.hoehe = 0.0;
             this.material = "";
             this.istTragend = false;
+
             this.bewehrungsmenge = 0.0;
             this.schalungsmenge = 0.0;
         }
 
         public void BerechneSchalungsflaeche()
         {
-            if (this.material.Equals("Mauerwerk"))
+            if (this.material.Equals("Mauerwerk") == false)
             {
                 this.schalungsmenge = laenge * hoehe * 2;
             }
@@ -62,7 +63,7 @@ namespace Wandrechner
             return
                 $"Masse (b * l * h): {this.breite} m * {this.laenge} m * {this.hoehe} m\n" +
                 $"Material: {this.material}\n" +
-                $"Bewehrungsmenge: {this.bewehrungsmenge} \n" +
+                $"Bewehrungsmenge: {this.bewehrungsmenge} kg\n" +
                 $"Schalungsmenge: {this.schalungsmenge} m2";
         }
     }
