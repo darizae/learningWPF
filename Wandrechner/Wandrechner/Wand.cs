@@ -23,5 +23,17 @@ namespace Wandrechner
             this.bewehrungsFlaeche = 0.0;
             this.schalungsFlaeche = 0.0;
         }
+
+        public void BerechneSchalungsflaeche()
+        {
+            if (this.material.Equals("Mauerwerk"))
+            {
+                this.schalungsFlaeche = laenge * hoehe * 2;
+            }
+            else
+            {
+                this.schalungsFlaeche = 0.0;
+            }
+        }
     }
 }
