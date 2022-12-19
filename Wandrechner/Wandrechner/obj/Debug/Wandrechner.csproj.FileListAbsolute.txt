@@ -1,0 +1,16 @@
+C:\Users\danie\git\learningWPF\Wandrechner\Wandrechner\bin\Debug\Wandrechner.exe.config
+C:\Users\danie\git\learningWPF\Wandrechner\Wandrechner\bin\Debug\Wandrechner.exe
+C:\Users\danie\git\learningWPF\Wandrechner\Wandrechner\bin\Debug\Wandrechner.pdb
+C:\Users\danie\git\learningWPF\Wandrechner\Wandrechner\obj\Debug\Wandrechner.csproj.AssemblyReference.cache
+C:\Users\danie\git\learningWPF\Wandrechner\Wandrechner\obj\Debug\Wandrechner.csproj.SuggestedBindingRedirects.cache
+C:\Users\danie\git\learningWPF\Wandrechner\Wandrechner\obj\Debug\MainWindow.g.cs
+C:\Users\danie\git\learningWPF\Wandrechner\Wandrechner\obj\Debug\App.g.cs
+C:\Users\danie\git\learningWPF\Wandrechner\Wandrechner\obj\Debug\Wandrechner_MarkupCompile.cache
+C:\Users\danie\git\learningWPF\Wandrechner\Wandrechner\obj\Debug\Wandrechner_MarkupCompile.lref
+C:\Users\danie\git\learningWPF\Wandrechner\Wandrechner\obj\Debug\MainWindow.baml
+C:\Users\danie\git\learningWPF\Wandrechner\Wandrechner\obj\Debug\Wandrechner.g.resources
+C:\Users\danie\git\learningWPF\Wandrechner\Wandrechner\obj\Debug\Wandrechner.Properties.Resources.resources
+C:\Users\danie\git\learningWPF\Wandrechner\Wandrechner\obj\Debug\Wandrechner.csproj.GenerateResource.cache
+C:\Users\danie\git\learningWPF\Wandrechner\Wandrechner\obj\Debug\Wandrechner.csproj.CoreCompileInputs.cache
+C:\Users\danie\git\learningWPF\Wandrechner\Wandrechner\obj\Debug\Wandrechner.exe
+C:\Users\danie\git\learningWPF\Wandrechner\Wandrechner\obj\Debug\Wandrechner.pdb

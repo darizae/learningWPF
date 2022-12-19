@@ -30,15 +30,19 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Label HorizontalAlignment="Center" VerticalAlignment="Center" Content="Breite b [m]"></Label>
-                <TextBox Grid.Row="0" Grid.Column="1" Height="20" Margin="0,14,70,14" Text="0,0"/>
+                <TextBox Grid.Row="0" Grid.Column="1" Height="20" Margin="0,13,70,8" Text="0,0"/>
                 <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Länge l [m]"></Label>
-                <TextBox Grid.Row="1" Grid.Column="1" Height="20" Margin="0,14,70,14" Text="0,0"/>
+                <TextBox Grid.Row="1" Grid.Column="1" Height="20" Margin="0,13,70,8" Text="0,0"/>
                 <Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Höhe h [m]"></Label>
-                <TextBox Grid.Row="2" Grid.Column="1" Height="20" Margin="0,14,70,14" Text="0,0"/>
+                <TextBox Grid.Row="2" Grid.Column="1" Height="20" Margin="0,11,70,10" Text="0,0"/>
                 <CheckBox Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Wand ist tragend"></CheckBox>
                 <Label Grid.Row="4" Grid.Column="0" Content="Material" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-                <ComboBox Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Margin="0,0,34,0"></ComboBox>
-                <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Margin="15,10,15,10">Berechne Wandparameter!</Button>
+                <ComboBox Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Margin="0,0,34,0" SelectedIndex="0">
+                    <ComboBoxItem Content="Stahlbeton"></ComboBoxItem>
+                    <ComboBoxItem Content="Leichtbeton"></ComboBoxItem>
+                    <ComboBoxItem Content="Mauerwerk"></ComboBoxItem>
+                </ComboBox>
+                <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Margin="15,10,15,10" FontWeight="Bold">Berechne Wandparameter!</Button>
             </Grid>
         </GroupBox>
     </Grid>
