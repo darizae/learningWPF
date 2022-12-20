@@ -76,5 +76,6 @@
                 </Button.Resources>
             </Button>
         </Grid>
+        <Image Grid.Row="5" Source="/img/cat.png"></Image>
     </Grid>
 </Window>
