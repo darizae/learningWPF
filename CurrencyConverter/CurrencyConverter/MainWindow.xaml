@@ -39,11 +39,42 @@
                 <StackPanel Height="45" Orientation="Horizontal">
                     <TextBox x:Name="tb_amount" Width="200" Margin="0,0,58,0" Height="28" FontSize="16"></TextBox>
                     <ComboBox x:Name="cbo_currencyFrom" Width="174" Margin="0,0,15,0" Height="28" FontSize="16"/>
-                    <Image Source="/img/arrows.png" Margin="0,0,15,0"/>
+                    <Image Source="/img/arrows.png" Margin="0,0,15,0" Height="37" Width="47"/>
                     <ComboBox x:Name="cbo_currencyTo" Width="199" Height="28" FontSize="16"></ComboBox>
                 </StackPanel>
             </StackPanel>
         </Border>
-
+        <Grid Grid.Row="3" Margin="234,0,249,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btn_convert" Content="Convert" Margin="95,32,40,33" Foreground="White" FontSize="14">
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="#ec2075" Offset="0.0"/>
+                        <GradientStop Color="#f33944" Offset="0.50"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btn_clear" Grid.Column="1" Content="Clear" Margin="40,32,95,33" FontSize="14" Foreground="White">
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="#ec2075" Offset="0.0"/>
+                        <GradientStop Color="#f33944" Offset="0.50"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
     </Grid>
 </Window>
