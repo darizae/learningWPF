@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CurrencyConverter"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Currency Converter" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" Icon="/img/money_icon.png">
     <Grid>
         
     </Grid>
