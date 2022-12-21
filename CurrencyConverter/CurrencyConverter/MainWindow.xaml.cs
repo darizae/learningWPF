@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -72,6 +73,7 @@ namespace CurrencyConverter
             comboBox.SelectedIndex = 0;
         }
 
+        //Resets everything
         private void ClearControls()
         {
             tb_amount.Text = string.Empty;
@@ -81,6 +83,19 @@ namespace CurrencyConverter
             tb_amount.Focus();
         }
 
-        
+        //Allowed Characters
+        private readonly Regex _regex = new Regex("[^0-9.]+"); //regex that matches disallowed text
+
+        //Checks if input text is valid
+        private bool IsTextAllowed(string text)
+        {
+            return !_regex.IsMatch(text);
+        }
+
+        //Allows for text input or not
+        private void PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = !IsTextAllowed(e.Text);
+        }
     }
 }

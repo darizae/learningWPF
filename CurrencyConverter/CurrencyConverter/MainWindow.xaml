@@ -37,7 +37,7 @@
                     <Label Content="To:" HorizontalAlignment="Right" Width="253" FontWeight="Bold" FontSize="18" Foreground="#FFFDFCFC"></Label>
                 </StackPanel>
                 <StackPanel Height="45" Orientation="Horizontal">
-                    <TextBox x:Name="tb_amount" Width="200" Margin="0,0,58,0" Height="28" FontSize="16"></TextBox>
+                    <TextBox x:Name="tb_amount" Width="200" Margin="0,0,58,0" Height="28" FontSize="16" PreviewTextInput="PreviewTextInput"/>
                     <ComboBox x:Name="cbo_currencyFrom" Width="174" Margin="0,0,15,0" Height="28" FontSize="16"/>
                     <Image Source="/img/arrows.png" Margin="0,0,15,0" Height="37" Width="47"/>
                     <ComboBox x:Name="cbo_currencyTo" Width="199" Height="28" FontSize="16"></ComboBox>
