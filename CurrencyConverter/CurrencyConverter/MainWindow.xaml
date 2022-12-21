@@ -20,7 +20,7 @@
         </StackPanel>
         <StackPanel Grid.Row="1" Orientation="Vertical">
             <Label Content="Converted Currency" Height="40" Width="1000" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"></Label>
-            <Label x:Name="lbl_currency"  Height="40" Width="1000" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"></Label>
+            <Label x:Name="lbl_converted"  Height="40" Width="1000" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"></Label>
         </StackPanel>
 
         <Border Grid.Row="2" BorderBrush="Red" BorderThickness="5" Height="130" Width="800" VerticalAlignment="Top" Margin="98,10,98,0" CornerRadius="10">
@@ -62,7 +62,7 @@
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="btn_clear" Grid.Column="1" Content="Clear" Margin="40,32,95,33" FontSize="14" Foreground="White">
+            <Button x:Name="btn_clear" Grid.Column="1" Content="Clear" Margin="40,32,95,33" FontSize="14" Foreground="White" Click="btn_clear_Click">
                 <Button.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
                         <GradientStop Color="#ec2075" Offset="0.0"/>

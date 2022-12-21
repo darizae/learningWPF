@@ -31,6 +31,11 @@ namespace CurrencyConverter
             BindCurrency(cbo_currencyTo);
         }
 
+        private void btn_clear_Click(object sender, RoutedEventArgs e)
+        {
+            ClearControls();
+        }
+
         //Currency data for ComboBox
         private void BuildDataTable()
         {
@@ -51,7 +56,7 @@ namespace CurrencyConverter
             dtCurrency.Rows.Add("DEM", 43);
         }
 
-        
+        //Populates Combo Boxes
         private void BindCurrency(ComboBox comboBox)
         {
             //ComboBox is populated with data from the DataTable
@@ -66,5 +71,16 @@ namespace CurrencyConverter
             //The index of the default value ("--Select--")
             comboBox.SelectedIndex = 0;
         }
+
+        private void ClearControls()
+        {
+            tb_amount.Text = string.Empty;
+            cbo_currencyFrom.SelectedIndex= 0;
+            cbo_currencyTo.SelectedIndex= 0;
+            lbl_converted.Content = string.Empty;
+            tb_amount.Focus();
+        }
+
+        
     }
 }
