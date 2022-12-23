@@ -23,6 +23,8 @@ namespace CurrencyConverter
     public partial class MainWindow : Window
     {
         DataTable dtCurrency;
+        double input, valueFrom, valueTo, conversionRate, output;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -96,6 +98,16 @@ namespace CurrencyConverter
         private void PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             e.Handled = !IsTextAllowed(e.Text);
+        }
+
+        private double calculateConversion()
+        {
+            input = double.Parse(tb_amount.Text);
+            valueFrom = Convert.ToDouble(cbo_currencyFrom.SelectedValue);
+            valueTo = Convert.ToDouble(cbo_currencyTo.SelectedValue);
+            conversionRate = valueTo / valueFrom;
+
+            return input * conversionRate;
         }
     }
 }
