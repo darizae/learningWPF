@@ -123,28 +123,28 @@ namespace CurrencyConverter
         {
             if (string.IsNullOrEmpty(tb_amount.Text))
             {
-                MessageBox.Show("Please enter an amount for conversion");
+                MessageBox.Show("Please enter an amount for conversion", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
                 tb_amount.Focus();
                 return false;
             }
 
             if (cbo_currencyFrom.SelectedValue.ToString() == "0")
             {
-                MessageBox.Show("Please enter from which currency you want to convert");
+                MessageBox.Show("Please enter from which currency you want to convert", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
                 cbo_currencyFrom.Focus();
                 return false;
             }
 
             if (cbo_currencyTo.SelectedValue.ToString() == "0")
             {
-                MessageBox.Show("Please enter which currency you want to convert to");
+                MessageBox.Show("Please enter which currency you want to convert to", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
                 cbo_currencyTo.Focus();
                 return false;
             }
 
             if (cbo_currencyFrom.SelectedValue == cbo_currencyTo.SelectedValue)
             {
-                MessageBox.Show("You're converting from and to the same currency");
+                MessageBox.Show("You're converting from and to the same currency", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
                 cbo_currencyFrom.Focus();
                 return false;
             }
@@ -156,9 +156,13 @@ namespace CurrencyConverter
         private void convert()
         {
             output = calculateConversion();
-            string currencyFrom = dtCurrency.Rows[cbo_currencyFrom.SelectedIndex].Field<string>("Name");
-            string currencyTo = dtCurrency.Rows[cbo_currencyTo.SelectedIndex].Field<string>("Name");
-            lbl_converted.Content = $"{input} {currencyFrom} = {output} {currencyTo}";
+
+            if (output != 0)
+            {
+                string currencyFrom = dtCurrency.Rows[cbo_currencyFrom.SelectedIndex].Field<string>("Name");
+                string currencyTo = dtCurrency.Rows[cbo_currencyTo.SelectedIndex].Field<string>("Name");
+                lbl_converted.Content = $"{input} {currencyFrom} = {output} {currencyTo}";
+            } 
         }
     }
 }
