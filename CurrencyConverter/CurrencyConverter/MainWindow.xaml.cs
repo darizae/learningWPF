@@ -100,14 +100,52 @@ namespace CurrencyConverter
             e.Handled = !IsTextAllowed(e.Text);
         }
 
-        private double calculateConversion()
+        private void calculateConversion()
         {
+
+            bool x = handleExceptions();
+
+
             input = double.Parse(tb_amount.Text);
             valueFrom = Convert.ToDouble(cbo_currencyFrom.SelectedValue);
             valueTo = Convert.ToDouble(cbo_currencyTo.SelectedValue);
             conversionRate = valueTo / valueFrom;
 
-            return input * conversionRate;
+            output = input * conversionRate;
+        }
+
+        //Handles unchecked exceptions
+        private bool handleExceptions()
+        {
+            if (string.IsNullOrEmpty(tb_amount.Text))
+            {
+                MessageBox.Show("Please enter an amount for conversion");
+                tb_amount.Focus();
+                return false;
+            }
+
+            if (cbo_currencyFrom.SelectedValue.ToString() == "0")
+            {
+                MessageBox.Show("Please enter from which currency you want to convert");
+                cbo_currencyFrom.Focus();
+                return false;
+            }
+
+            if (cbo_currencyTo.SelectedValue.ToString() == "0")
+            {
+                MessageBox.Show("Please enter which currency you want to convert to");
+                cbo_currencyTo.Focus();
+                return false;
+            }
+
+            if (cbo_currencyFrom.SelectedValue == cbo_currencyTo.SelectedValue)
+            {
+                MessageBox.Show("You're converting from and to the same currency");
+                cbo_currencyFrom.Focus();
+                return false;
+            }
+
+            return true;
         }
     }
 }
