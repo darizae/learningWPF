@@ -94,24 +94,28 @@ namespace CurrencyConverter
             return !_regex.IsMatch(text);
         }
 
+        private void btn_convert_Click(object sender, RoutedEventArgs e)
+        {
+            convert();
+        }
+
         //Allows for text input or not
         private void PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             e.Handled = !IsTextAllowed(e.Text);
         }
 
-        private void calculateConversion()
+        private double calculateConversion()
         {
-
-            bool x = handleExceptions();
-
-
-            input = double.Parse(tb_amount.Text);
-            valueFrom = Convert.ToDouble(cbo_currencyFrom.SelectedValue);
-            valueTo = Convert.ToDouble(cbo_currencyTo.SelectedValue);
-            conversionRate = valueTo / valueFrom;
-
-            output = input * conversionRate;
+            if (handleExceptions())
+            {
+                input = double.Parse(tb_amount.Text);
+                valueFrom = Convert.ToDouble(cbo_currencyFrom.SelectedValue);
+                valueTo = Convert.ToDouble(cbo_currencyTo.SelectedValue);
+                conversionRate = valueTo / valueFrom;
+                return Math.Round(input * conversionRate, 2);
+            }
+            return 0;
         }
 
         //Handles unchecked exceptions
@@ -146,6 +150,15 @@ namespace CurrencyConverter
             }
 
             return true;
+        }
+
+        //Calculates conversion and updates converted label
+        private void convert()
+        {
+            output = calculateConversion();
+            string currencyFrom = dtCurrency.Rows[cbo_currencyFrom.SelectedIndex].Field<string>("Name");
+            string currencyTo = dtCurrency.Rows[cbo_currencyTo.SelectedIndex].Field<string>("Name");
+            lbl_converted.Content = $"{input} {currencyFrom} = {output} {currencyTo}";
         }
     }
 }
