@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using IronPython.Hosting;
 
 namespace GC_Content_Analyzer
 {
@@ -23,6 +24,13 @@ namespace GC_Content_Analyzer
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var engine = Python.CreateEngine();
+
+            var module = engine.ExecuteFile("hello_world.py");
         }
     }
 }
