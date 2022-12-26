@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="384,205,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Content="Load a FASTA File" HorizontalAlignment="Center" Margin="0,42,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Label x:Name="lblFileName" Content="" HorizontalAlignment="Center" Margin="0,67,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
