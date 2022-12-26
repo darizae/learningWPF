@@ -17,6 +17,7 @@ using static IronPython.Modules._ast;
 using static System.Net.Mime.MediaTypeNames;
 using Microsoft.Win32;
 using System.IO;
+using Microsoft.Scripting.Hosting;
 
 namespace GC_Content_Analyzer
 {
@@ -34,9 +35,17 @@ namespace GC_Content_Analyzer
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //var engine = Python.CreateEngine();
-            //var module = engine.ExecuteFile("hello_world.py");
             OpenFile();
+        }
+
+        private void btnRun_Click(object sender, RoutedEventArgs e)
+        {
+            ScriptEngine engine = Python.CreateEngine();
+            ScriptScope scope = engine.CreateScope();
+            engine.ExecuteFile("gc_content_analyzer.py",scope);
+
+            dynamic function = scope.GetVariable("test");
+            function("Hello World");
         }
 
         private void OpenFile()
@@ -60,11 +69,11 @@ namespace GC_Content_Analyzer
                 // Open document
                 string fileName = dlg.FileName;
                 lblFileName.Content = fileName;
-
-                Console.WriteLine(File.ReadAllText(dlg.FileName));
             }
 
             
         }
+
+        
     }
 }

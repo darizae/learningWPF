@@ -402,7 +402,6 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("lib/lib2to3/fixes/fix_xreadlines.py")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("lib/lib2to3/fixes/fix_zip.py")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("lib/lib2to3/fixes/__init__.py")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scripts/hello_world.py")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("lib/lib2to3/main.py")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("lib/lib2to3/patcomp.py")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("lib/lib2to3/pgen2/conv.py")]

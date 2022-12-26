@@ -539,7 +539,6 @@
     <Content Include="lib\lib2to3\fixes\fix_xreadlines.py" />
     <Content Include="lib\lib2to3\fixes\fix_zip.py" />
     <Content Include="lib\lib2to3\fixes\__init__.py" />
-    <Content Include="scripts\hello_world.py" />
     <Resource Include="lib\lib2to3\Grammar.txt" />
     <Content Include="lib\lib2to3\main.py" />
     <Content Include="lib\lib2to3\patcomp.py" />
@@ -770,6 +769,8 @@
     <Content Include="lib\__future__.py" />
     <Content Include="lib\__phello__.foo.py" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="scripts\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
